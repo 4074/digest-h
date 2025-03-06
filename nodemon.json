@@ -1,0 +1,6 @@
+{
+  "exec": "node -r ts-node/register --inspect=4229 ./src/index.ts",
+  "watch": ["src"],
+  "ext": "js,ts",
+  "inspect": true
+}
