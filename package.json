@@ -1,6 +1,6 @@
 {
   "name": "digest-h",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "http digest authorization tools",
   "main": "dist/index.js",
   "scripts": {
