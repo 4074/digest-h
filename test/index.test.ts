@@ -31,7 +31,7 @@ describe('createDigest', () => {
   })
 })
 
-describe('createDigest', () => {
+describe('validDigest', () => {
   it('should not valid cnone expried', () => {
     expect(
       validDigest({
@@ -109,6 +109,23 @@ describe('createDigest', () => {
           needs: ['username', 'realm', 'uri', 'qop', 'cnonce', 'nonce']
         }
       )
+    ).toBe(false)
+  })
+
+  it('should support number part', () => {
+    expect(
+      validDigest({
+        method: 'get',
+        digest: createDigest({
+          realm: 'digest-h',
+          username: 'user',
+          password: '123456',
+          method: 'GET',
+          uri: '/index',
+          nc: 1
+        }),
+        password: '123456'
+      })
     ).toBe(false)
   })
 })

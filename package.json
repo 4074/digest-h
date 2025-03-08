@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "http digest authorization tools",
   "main": "dist/index.js",
+  "files": [
+    "src/**/*",
+    "dist/**/*"
+  ],
   "scripts": {
     "start": "ts-node src/index.ts",
     "test": "jest",
